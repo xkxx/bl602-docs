@@ -761,7 +761,7 @@
 <div><ul>
 <li><p>Purpose: Input authentication passkey.</p></li>
 <li><p>Params: the value of the passkey. The range is 0-999999.</p></li>
-<li><p>Example: When pairing with the ble_security 3 command and the SMP pairing method is PASSKEY_INPUT (implementation method in the code: when registering the smp interface function with ble_auth, fill the function passkey_entry in the data structure bt_conn_auth_cb, passkey_display and passkey_confirm are not filled, other interface functions The default is OK), the serial port will prompt “Enter passkey for XX:XX:XX:XX:XX:XX (public)”, then enter the command <a href="#id1"><span class="problematic" id="id2">``</span></a>ble_auth_passkey 111111’’ to complete the pairing</p>
+<li><p>Example: When pairing with the ble_security 3 command and the SMP pairing method is PASSKEY_INPUT (Implementation: when registering the SMP interface function with ble_auth, populate the data structure bt_conn_auth_cb with the function passkey_entry filled, passkey_display and passkey_confirm unfilled, and the default values for all other fields), the serial port will prompt “Enter passkey for XX:XX:XX:XX:XX:XX (public)”, then enter the command <code class="docutils literal notranslate"><span class="pre">ble_auth_passkey</span> <span class="pre">111111</span></code> to complete the pairing.</p>
 <blockquote>
 <div><div class="figure align-default">
 <img alt="" src="../../_images/image24.png" />
